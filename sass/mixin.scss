@@ -1,0 +1,143 @@
+@mixin flex() {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transition-delay($delay...) {
+    -moz-transition-delay: $delay;
+    -o-transition-delay: $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay: $delay;
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin translate3d($x, $y, $z) {
+    -webkit-transform: translate3d($x, $y, $z);
+    -moz-transform: translate3d($x, $y, $z);
+    -o-transform: translate3d($x, $y, $z);
+    transform: translate3d($x, $y, $z);
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon/icomoon.eot?srf3rx');
+    src: url('../fonts/icomoon/icomoon.eot?srf3rx#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?srf3rx') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?srf3rx') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?srf3rx#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin icomoon() {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animation ($stuff) {
+    -webkit-animation: $stuff;
+    -moz-animation: $stuff;
+    -ms-animation: $stuff;
+    animation: $stuff;
+}
+
+@mixin appearance($appearance) {
+    $appearance: unquote($appearance);
+    @include with-prefix(-moz) {
+        -moz-appearance: $appearance;
+    }
+    @include with-prefix(-webkit) {
+        -webkit-appearance: $appearance;
+    }
+}
+
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+
+@mixin placeholder {
+     ::-webkit-input-placeholder {
+        @content
+    }
+     :-moz-placeholder {
+        @content
+    }
+     ::-moz-placeholder {
+        @content
+    }
+     :-ms-input-placeholder {
+        @content
+    }
+}
+
+@mixin clip-path($clip) {
+    -webkit-clip-path: $clip;
+    -moz-clip-path: $clip;
+    -ms-clip-path: $clip;
+    clip-path: $clip;
+}
+
+@mixin gradient($from,
+$to) {
+    /* fallback/image non-cover color */
+    background-color: $from;
+    /* Firefox 3.6+ */
+    background-image: -moz-linear-gradient($from, $to);
+    /* Safari 4+, Chrome 1+ */
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+    /* Safari 5.1+, Chrome 10+ */
+    background-image: -webkit-linear-gradient($from, $to);
+    /* Opera 11.10+ */
+    background-image: -o-linear-gradient($from, $to);
+}

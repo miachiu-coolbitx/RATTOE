@@ -1,0 +1,111 @@
+<div class="blog">
+    <section class="blog_content">
+        <div class="container">
+            <div class="image-wrapper">
+                <img src="https://source.unsplash.com/random" alt="blog_cover" />
+            </div>
+            <div class="blog_intro">
+                <p class="post_date">
+                    <span>2018/02/19</span><span class="post_admin">by 愛必</span>
+                </p>
+                <h3>生活中療癒的日常</h3>
+                <p class="ellipsis-1"><%= zh_lorem_paragraph %></p>
+                <div class="text-right">
+                    <a class="post_button btn btn-border" href="#">閱讀全文</a>
+                </div>
+                <div class="text-center d-md-block d-none">
+                    <a class="post_button btn btn-fb" href="#">Facebook 登入</a>
+                </div>
+                <div class="text-center d-md-none d-block" id="input_block">
+                    <div class="row align-items-center py-3">
+                        <label for="staticEmail2" class="col-3">輸入全名：</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="staticEmail2" value="">
+                        </div>
+                    </div>
+                    <a class="post_button btn btn-primary w-100" href="#">觀看結果</a>
+                </div>
+                <ul class="post_tags text-center">
+                    <% 8.times do %>
+                    <li>
+                        <a href="#"><%= zh_lorem_words(4+rand(4)) %></a>
+                    </li>
+                    <% end %>
+                </ul>
+            </div>
+            <hr />
+            <div class="fb_plugin">
+                <div class="row">
+                    <div class="col-lg-6 col-md-4">
+                        <div class="post_action">
+                            <ul class="post_links">
+                                <li>
+                                    <a href="#">
+                                        <img src="images/icon/share_icon.png" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/icon/rank_icon.png" />
+                                        <span>0</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/icon/comments_icon.png" />
+                                        <span>1</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-8">
+                        <div class="row justify-content-md-between justify-content-center">
+                            <div class="col-md-3 fb_admin">
+                                <span class="admin">題目提供者</span>
+                            </div>
+                            <div class="col-md-9 fb_page">
+                                <div class="fb-page" data-href="https://www.facebook.com/ibeindeed/" data-tabs=""
+                                    data-width="" data-height="" data-small-header="true"
+                                    data-adapt-container-width="false" data-hide-cover="false"
+                                    data-show-facepile="false">
+                                    <blockquote data-width="" cite="https://www.facebook.com/ibeindeed/"
+                                        class="fb-xfbml-parse-ignore"><a
+                                            href="https://www.facebook.com/ibeindeed/">愛必</a></blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div class="fb-comments" data-href="https://www.facebook.com/pg/ibeindeed/comments#configurator"
+                            data-width="100%" data-numposts="1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quiz_btn quiz_prev d-none d-md-block">
+            <a href="blog.html" class="">
+                <div class="image-wrapper">
+                    <img src="https://source.unsplash.com/random" alt="quiz-prev">
+                </div>
+            </a>
+        </div>
+        <div class="quiz_btn quiz_next d-none d-md-block">
+            <a href="blog.html" class="">
+                <div class="image-wrapper">
+                    <img src="https://source.unsplash.com/random" alt="quiz-next">
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="posts_content">
+        <div class="container">
+            <h3 class="title">推薦文章</h3>
+            <div class="row">
+                <% 3.times do %>
+                <%= render :partial => "post_col-4" %>
+                <% end %>
+            </div>
+        </div>
+    </section>
+</div>

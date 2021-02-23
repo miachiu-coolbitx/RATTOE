@@ -1,0 +1,67 @@
+<div class="index">
+    <div class="container container_slider">
+        <div class="slider wow fadeIn pt-md-4 mb-0" data-wow-duration="2s">
+            <% 4.times do %>
+            <div class="slide">
+                <div class="post main_post">
+                    <div class="post_cover post_cover" style="background-image: url(https://source.unsplash.com/random);">
+                        <a class="post_button btn btn-primary d-lg-none d-block" href="blog.html">立即測驗</a>
+                    </div>
+                    <div class="post_text px-3 py-2">
+                        <div class="post_title">
+                            <h3 class="ellipsis-2"><%= zh_lorem_sentence %></h3>
+                        </div>
+                        <div class="post_content">
+                            <div class="post_intro">
+                                <p class="ellipsis-4"><%= zh_lorem_paragraph %></p>
+                            </div>
+                            <p class="post_date">
+                                <span>2018/02/19</span><span class="post_admin">by admin</span>
+                            </p>
+                            <ul class="post_tags">
+                                <% 8.times do %>
+                                <li>
+                                    <a href="#"><%= zh_lorem_words(4+rand(4)) %></a>
+                                </li>
+                                <% end %>
+                            </ul>
+                            <%= render :partial => "post_action" %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+    <div class="container">
+        <section>
+            <div class="row">
+                <% 3.times do %>
+                <%= render :partial => "post_col-4" %>
+                <% end %>
+            </div>
+            <div class="row">
+                <% 2.times do %>
+                <div class="col-md-6 posts">
+                    <div class="post">
+                        <div class="post_cover" style="background-image: url(https://source.unsplash.com/random);"></div>
+                        <div class="post_text px-3 py-3">
+                            <h4 class="post_title ellipsis-1"><%= zh_lorem_sentence %></h4>
+                            <div class="post_content">
+                                <div class="post_intro">
+                                    <p class="ellipsis-2"><%= zh_lorem_paragraph %></p>
+                                </div>
+                                <p class="post_date"><span>2018/02/19</span></p>
+                                <%= render :partial => "post_action" %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+        </section>
+        <div class="learn_more_btn py-3 pb-5">
+            <a class="btn btn-primary" href="blog.html">更多測驗</a>
+        </div>
+    </div>
+</div>
