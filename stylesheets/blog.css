@@ -293,14 +293,18 @@ ul {
   }
   /* line 221, ../sass/style.scss */
   #header .menus li a:not(.label) span:after {
-    width: calc(100% - 2rem);
+    width: 0%;
     background-color: #135384;
   }
   /* line 225, ../sass/style.scss */
   #header .menus li a:not(.label):hover {
     color: #135384;
   }
-  /* line 229, ../sass/style.scss */
+  /* line 227, ../sass/style.scss */
+  #header .menus li a:not(.label):hover span:after {
+    width: calc(100% - 2px);
+  }
+  /* line 232, ../sass/style.scss */
   #header .menus li a.label {
     padding: 5px 12px;
     background-color: #135384;
@@ -313,31 +317,31 @@ ul {
     -webkit-border-radius: 30px;
     border-radius: 30px;
   }
-  /* line 235, ../sass/style.scss */
+  /* line 238, ../sass/style.scss */
   #header .menus li a.label span:after {
     display: none;
   }
-  /* line 238, ../sass/style.scss */
+  /* line 241, ../sass/style.scss */
   #header .menus li a.label:hover {
     color: white;
     opacity: 0.75;
   }
-  /* line 243, ../sass/style.scss */
+  /* line 246, ../sass/style.scss */
   #header .menus li:nth-of-type(2) {
     padding-left: 10px;
   }
-  /* line 248, ../sass/style.scss */
+  /* line 251, ../sass/style.scss */
   #header .fb_login img:nth-of-type(1) {
     height: 28px;
     margin-right: 15px;
   }
-  /* line 252, ../sass/style.scss */
+  /* line 255, ../sass/style.scss */
   #header .fb_login img:nth-of-type(2) {
     height: 17px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 258, ../sass/style.scss */
+  /* line 261, ../sass/style.scss */
   #header .offcanvas-collapse {
     position: fixed;
     top: -100%;
@@ -353,7 +357,7 @@ ul {
     transition-duration: .01s;
     opacity: 0;
   }
-  /* line 272, ../sass/style.scss */
+  /* line 275, ../sass/style.scss */
   #header .offcanvas-collapse.active {
     left: 0;
     visibility: visible;
@@ -362,51 +366,51 @@ ul {
     transition-duration: .3s;
     top: 0;
   }
-  /* line 280, ../sass/style.scss */
+  /* line 283, ../sass/style.scss */
   #header .offcanvas-collapse .navbar-nav {
     position: relative;
     padding: 5rem 0 2rem;
     height: 100%;
     text-align: center;
   }
-  /* line 285, ../sass/style.scss */
+  /* line 288, ../sass/style.scss */
   #header .offcanvas-collapse .navbar-nav li {
     width: 100%;
   }
-  /* line 287, ../sass/style.scss */
+  /* line 290, ../sass/style.scss */
   #header .offcanvas-collapse .navbar-nav li a {
     padding: 0.75rem 0.25rem;
     font-size: 18px;
     color: #ffffff;
   }
-  /* line 291, ../sass/style.scss */
+  /* line 294, ../sass/style.scss */
   #header .offcanvas-collapse .navbar-nav li a.nav-link {
     font-weight: 500;
     letter-spacing: 0.5rem;
   }
-  /* line 297, ../sass/style.scss */
+  /* line 300, ../sass/style.scss */
   #header .offcanvas-collapse .navbar-nav li:hover a.nav-link {
     color: #eee;
   }
 }
 
-/* line 307, ../sass/style.scss */
+/* line 310, ../sass/style.scss */
 .no-scroll {
   overflow-y: hidden;
 }
 
-/* line 311, ../sass/style.scss */
+/* line 314, ../sass/style.scss */
 #main {
   background: #ECECEC;
 }
-/* line 313, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 #main section {
   position: relative;
   display: block;
   padding: 2rem 0;
 }
 
-/* line 320, ../sass/style.scss */
+/* line 323, ../sass/style.scss */
 #footer {
   position: relative;
   padding: 1.25rem 0;
@@ -415,13 +419,13 @@ ul {
   font-weight: lighter;
   background-color: #5A6266;
 }
-/* line 327, ../sass/style.scss */
+/* line 330, ../sass/style.scss */
 #footer a {
   color: #ECECEC;
   font-weight: normal;
   font-size: 13px;
 }
-/* line 332, ../sass/style.scss */
+/* line 335, ../sass/style.scss */
 #footer .d-inline-block {
   margin-left: 15px;
 }
