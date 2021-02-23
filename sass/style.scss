@@ -219,11 +219,14 @@ ul {
             padding: 0 5px;
             a:not(.label) {
                 span:after {
-                    width: calc(100% - 2rem);
+                    width: 0%;
                     background-color: $main-color;
                 }
                 &:hover {
                     color: $main-color;
+                    span:after {
+                        width: calc(100% - 2px);
+                    }
                 }
             }
             a.label {
