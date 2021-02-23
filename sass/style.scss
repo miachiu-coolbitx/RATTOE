@@ -126,10 +126,12 @@ ul {
     position: relative;
     width: 100%;
     background-color: white;
+    overflow: hidden;
     .logo {
         padding: $pm-xs 0;
         margin-right: 15px;
         img {
+            width: 100%;
             max-height: 33px;
         }
         @media screen and (max-width: $screen-sm-max) {
